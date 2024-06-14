@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    .bksbadan {
+      display: flex;
+      overflow-x: auto; /* Aktifkan horizontal scrolling */
+      padding: 10px;
+      gap: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      flex-wrap: nowrap; /* Mencegah item turun ke baris berikutnya */
+    }
+    .badan {
+      min-width: 150px; /* Tentukan lebar minimum untuk tiap item */
+      margin: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gambar {
+      position: relative;
+    }
+    .bunder {
+      width: 50px; /* Kecilkan ukuran img.bg */
+      height: 50px;
+      border-radius: 50%;
+    }
+    .kata {
+      font-size: 10px; /* Kecilkan ukuran teks span.kata */
+      padding: 2px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .FB {
+      width: 150px; /* Besarkan ukuran img.FB */
+      height: 200px;
+      margin-top: 10px;
+    }
+    .show-all {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      padding: 10px 20px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .show-all:hover {
+      background-color: ;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .show-all:focus {
+      outline: none;
+    }
+    .show-all-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .show-all svg {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="bksbadan">
+  <div class="badan visible">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan visible">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+  <div class="badan">
+    <div class="gambar">
+      <img src="Bg.jpg" alt="" class="bunder">
+      <span class="kata">Kabar keluarga</span>
+    </div>
+    <img src="Fb.jpg" alt="" class="FB">
+  </div>
+</div>
+
+<div class="show-all-container">
+  <button class="show-all" onclick="showAll()">
+    Selengkapnya
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="white" d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const visibleItems = document.querySelectorAll('.badan.visible');
+    visibleItems.forEach(item => item.style.display = 'flex');
+  });
+
+  function showAll() {
+    const bksbadan = document.querySelector('.bksbadan');
+    bksbadan.style.overflowX = 'visible'; // Matikan horizontal scrolling
+    bksbadan.style.flexWrap = 'wrap'; // Tampilkan semua item dalam mode blok biasa
+    const images = document.querySelectorAll('.badan');
+    images.forEach(image => {
+      image.style.display = 'flex'; // Menampilkan semua gambar
+    });
+    // Sembunyikan tombol setelah semua gambar ditampilkan
+    document.querySelector('.show-all').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

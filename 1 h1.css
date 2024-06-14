@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body {
+    background-color: #eaeaea;
+}
+.wrapper{
+    width: 400px;
+    height: 700px;
+    padding-top: 3%;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 4px #000;
+}
+
+h1{
+    font-size: 50px;
+    color: rgb(17 107 143);;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+from input {
+    width: 250px;
+    height: 15px;    
+    outline: none;
+    border: 7px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+    font-size: 18px;
+}
+label{
+    font-size: 11px;
+}
+
+input:invalid,
+input:required:invalid {
+    border: none;
+    outline: 1px solid ;
+    border-radius: 2px;
+}
+
+input:valid,
+input:required {
+    border: 1px solid green;
+    outline: inherit;
+    border-radius: inherit;
+}
+button{
+    font-size: 21px;
+    margin-top: 15%;
+    padding: 10px 0;
+    border-radius: 90px;
+    outline: none;
+    border: none;
+    width: 250px;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(17 107 143);
+}
+button a{
+    text-decoration: none;
+}
+button hover {
+    background: rgb(17 107 143 0.877);
+}
+input focus{
+    border: 1px solid rgb( 192 192 192)
+}
+
+.terms{
+    margin-top: 2rem;
+}
+.terms input{
+    height: 1px;
+    width: 1px;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 5%;
+    height: 13px;
+    margin-top: 1%;
+}
+.terms label{
+    font-size: 15px;
+}
+.terms a{
+    color: rgb(17 107 143);
+    text-decoration: none;
+}
+.member{
+    font-size: 15px;
+    margin-top: 1.4px;
+    color: #636363;
+}
+.member a{
+    color: rgb( 17 107 143);
+    text-decoration: none;
+}
+h3{
+    font-size: 15px;
+    color: rgb(17 107 143);;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+
+@media (min-width: 475px) {
+  container{
+    
+  }
+}
+@media (min-width: 640px) 
+max-width: {
+  container {
+    max-width: 640;
+  }
+}
+max-width: 
+@media (min-width: 768px) {
+  container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  * {
+    max-width: 1024px;
+  }
+}
+max-width: 
+@media (min-width: 1280px) {
+  * {
+    weight: 50%;
+  }
+}
+@media (min-width: 1576px) {
+  * {
+    height: 100%;
+  }
+}

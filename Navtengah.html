@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Navigasi</title>
+  <style>
+    .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: row;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;/* Mengatur navigasi menjadi horizontal */
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: black;
+      position: relative;
+    }
+
+    .navigation a img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .navigation a span {
+      margin-top: 5px;
+    }
+
+    .search-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 8px;
+      width: 20%;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .search-container button {
+      padding: 8px;
+      background-color: #4CAF50;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navigation {
+        flex-direction: column;
+      }
+
+      .search-container input[type="text"] {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <nav class="navigation">
+    <a href="#">
+      <img src="../image/bagan.png" alt="Bagan Icon">
+      <span>Bagan</span>
+    </a>
+    <a href="#">
+      <img src="../image/Keluarga.png" alt="Keluarga Icon">
+      <span>Keluarga</span>
+    </a>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari...">
+    <button onclick="search()">Search</button>
+  </div>
+  </nav>
+</div>
+
+
+<script>
+  function search() {
+    var input, filter, nav, a, span, txtValue;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    nav = document.querySelector('.navigation');
+    a = nav.getElementsByTagName('a');
+    for (var i = 0; i < a.length; i++) {
+      span = a[i].getElementsByTagName('span')[0];
+      txtValue = span.textContent || span.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = '';
+      } else {
+        a[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>KELUARGAKU</title>
+  <link rel="stylesheet" href="Pengaturan.css">
+</head>
+<body>
+  <nav class ="navbar">
+        <a href="Hal u.html" class="nav-link link-active">
+            <img src="../image/Halaman.png">
+            <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="Cari.html" class="nav-link">
+            <img src="../image/Cari.png">
+            <span class="nav-text">Cari</span>
+        </a>
+        <a href="Chat.html" class="nav-link">
+            <img src="../image/Chat.png">
+            <span class="nav-text">Chat</span>
+        </a>
+        <a href="#" class="nav-link">
+            <img src="../image/Saya.png">
+            <span class="nav-text">Saya</span>
+        </a>
+    </nav>
+  <div class="Judul"><h1>Keluargaku</h1>
+    <div class="jdl">
+      <div class="prof">
+        <img src="Bg.jpg" alt="" class="profil">
+        <span class="nama"><h4>Muhyi Sadewo</h4></span>
+      </div>
+      <div class="kolom1">
+        <a href="../Pengaturan/Profilnoedit.html">
+          <img src="Bg.jpg" alt="" class="P">
+          <span class="show1">Profile</span>
+        </a>
+      </div>
+      <div class="kolom2">
+        <a href="../Pengaturan/Barcode.html">
+          <img src="Bg.jpg" alt="" class="P">
+          <span class="show2">Barcode</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="sub-menu-wrap">
+    <div class="sub-menu">
+      <a href="../Pengaturan/Profilsip.html" class="sub-menu-link">
+        <img src="../Image/Edit.png" alt="" />
+        <p>Edit Profile</p>
+        <span>》</span>
+      </a>
+      <div class="sub-menu-link" onclick="toggleLanguageMenu()">
+        <img src="../Image/Pengaturan.png" alt="" />
+        <p>Bahasa</p>
+        <span>》</span>
+      </div>
+      <div class="sub-menu-link" id="languageMenu" style="display: none;">
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="ind">Indonesia</option>
+          <option value="zh">Chinese</option>
+        </select>
+      </div>
+      <a href="#" class="sub-menu-link">
+        <img src="../Image/Bantuan.png" alt="" />
+        <p>Bantuan</p>
+        <span>》</span>
+      </a>
+      <a href="../PENGATURAN/Flw.html" class="sub-menu-link">
+        <img src="../Image/Support.png" alt="" />
+        <p>Support Mee</p>
+        <span>》</span>
+      </a>
+      <br>
+      <hr>
+      <a href="#" class="logout-button" id="logoutBtn">
+        <img src="../Image/Keluar.png" alt="" />
+        <p>Logout</p>
+        <span>》</span>
+      </a>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <script>
+    function toggleLanguageMenu() {
+      const languageMenu = document.getElementById('languageMenu');
+      languageMenu.style.display = languageMenu.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function changeLanguage() {
+      const languageSelect = document.getElementById('languageSelect');
+      const selectedLanguage = languageSelect.value;
+      alert('Language changed to: ' + selectedLanguage);
+      // Here you would add code to actually change the language of the page content
+    }
+    // JavaScript untuk menangani aksi tombol Log Out
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+        // Meminta konfirmasi dari pengguna sebelum keluar dari akun
+        var confirmLogout = confirm("Apakah Anda yakin ingin keluar dari akun?");
+        
+        if (confirmLogout) {
+            // Jika pengguna menekan OK, lakukan logout
+            logout();
+        } else {
+            // Jika pengguna menekan Cancel, batalkan logout
+            alert("Logout dibatalkan.");
+        }
+    });
+
+    // Fungsi untuk logout
+    function logout() {
+        // Di sini Anda dapat menambahkan logika logout, seperti membersihkan sesi atau mengarahkan ke halaman logout
+        alert("Anda telah berhasil logout.");
+        // Contoh: Redirect ke halaman logout
+        window.location.href = "logout.php"; // Ganti dengan URL logout yang sesuai
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 30px;
+    display: grid;
+    align-items: center;
+    background: #f5f5f5;
+    font-family: 'poppins', sans-serif;
+}
+.tree {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.tree ul{
+    padding-top: 20px;
+    position: relative;
+    transition: .5s;
+}
+.tree li{
+    display: inline-table;
+    text-align: center ;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: .5s;
+}
+.tree li:before, .tree li:after {
+    content : '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #ccc;
+    width: 51%;
+    height: 10px;
+}
+.tree li :after{
+    right: auto ;
+    left : 50%;
+    border-left: 2px solid #ccc;
+}
+.tree li:only-child:after, .tree li:only-child:before{
+    display: none ;
+} 
+.tree li:only-child{
+    padding-top: 0;
+}
+.tree li:first-child:before, .tree li:last-child:after{
+    border: 0 none;
+}
+.tree li:last-child:before{
+    border-right: 2px solid #ccc ;
+    border-radius: 0px 5px 0px 0px;
+}
+.tree li:first-child:after{
+    border-right: 2px solid #ccc ;
+    border-radius: 5px 0px 0px 0px;
+}
+.tree ul ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+.tree a {
+    border: 2px solid #ccc;
+    padding: 1px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.tree a img{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 1px !important;
+    border-radius: 100px;
+    margin: auto ;
+}
+.tree a span{
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    color: #666;
+    padding: 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    latter-spacing: 10px;
+    font-width: 500;
+}
+/*hover-section*/
+.tree li a:hover, .tree li a:hover img, tree li a:hover span, tree li a:hover+ul li a {
+    background: #c8e4f8;
+    color: #000;
+    border: 3px solid #94a0b4;
+    box-shadow: 0px 0px 5px -3px;
+}
+.tree li a:hover+ul li:after, .tree li a:hover+ul li:before, .tree li a:hover+ul:before, .tree li a:hover+ul ul:before {
+    border-color: ##55eaff;
+}
+.input{
+  width: 10px;
+  height: auto;
+  display: flex;
+  margin-left: 13px;
+  padding-top: 6px;
+}
+.judul {
+    font-size: 20px;
+    padding-top: 4%;
+    padding-bottom: 15%;
+    padding-left: 15px;
+    font-family: sans-serif;
+    background: white;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 3px 4px #000;
+    color: rgb(17 107 143);
+}
+/* input */
+.box{
+  position: relative;
+  border-radius: 12px;
+  width: 330px;
+  height: 400px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 18px;
+  background-color: #fcfcfc;
+  display: none;
+  box-shadow: 0px 3px 4px #000;
+  /* display: none; */
+}
+/* head part of user icon */
+.circle .register-head{
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+/* body part of user icon */
+.circle .register-body  {
+  display: inline-block;
+  width: 35px;
+  margin: 0 auto;
+  margin-top: 26px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+.close{
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  color: tomato;
+  font-size: 34px;
+}
+.close:hover{
+  background-color: red;
+  border-radius: 0 12px 0 0;
+  color: #fcfcfc;
+  cursor: pointer;
+}
+.registration-box{
+  margin-top: 43px;
+}
+label{
+  display: block;
+  position: absolute;
+  font-size: 18px;
+  color: rgb(169 171 170);
+  margin-top: -62px;
+  padding-left: 18px;
+  text-align: left;
+  transition: .4s;
+}
+input{
+  width: 95%;
+  height: 42px;
+  margin: 10px 1px 28px 1px;
+  padding: 0px;
+  font-size: 18px;
+  color: #555;
+  border: rgb(65, 118, 97) 1px solid;
+  outline: none;
+  border-radius: 5px;
+}
+input:focus~label,
+input:valid~label{
+  margin-top: -90px;
+  padding-left: 8px;
+  color: #026948;
+  font-size: 500;
+}
+h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 21px;
+  font-weight: 0;
+}
+.circle{
+  position: absolute;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: -35px;
+  right: 0;
+  left: 0;
+  background-color: rgb(17 107 143);
+  border: 2px #fff solid;
+}
+.box .circle, .box span{
+  display: inline-block;
+  position: absolute;
+}
+.box span{
+  height: 2px;
+  background-color: rgb(1 170 133);
+}
+.box text{
+  font-size: 17px;
+  line-height: 25px;
+}
+p{
+  margin-top: 28px;
+  font-size: 22px;
+}
+button{
+  display: block;
+  margin: 0 auto;
+  margin-top: 90%;
+  padding: 20px;
+  border: none;
+  border-radius: 32px;
+  font-size: 20px;
+  background-color: rgb( 17 107 143);
+  color: white;
+}
+button:hover, button:focus{
+  background-color: rgb(3 145 144)
+  outline: rgb(2 137 108) 2px solid;
+  cursor: pointer;
+}
+/* for small device */
+@media(max-width: 350px){
+  .box{
+    width: 90%;
+  }
+}
+.btnSubmit{
+  padding: 15px;
+  margin: 0;
+  float: right;
+}

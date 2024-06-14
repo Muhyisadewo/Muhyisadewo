@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELUARGAKU</title>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script defer src="Acara.js"></script>
+    <link rel="stylesheet" href="Acara.css">
+</head>
+<body>
+    <!-- isi acara -->
+    <div class="judul"><h2>KELUARGAKU</h2></div>
+    <div class="bawahjudul"><h2>Catat</h2>Ayo isi agenda keluargamu sekarang !!!</div>
+    
+    <button class="btnOpen"><h1>+</h1></button>
+    <section class="box">
+        <div class="close">&times;</div>
+        <div class="circle">
+            <span class="register-head"></span>
+            <span class="register-body"></span>
+        </div>
+        <div class="registration-box">
+            <input type="hidden" id="eventId">
+            <div>
+                <input type="text" class="nama" required="required">
+                <label for="nama">Nama Acara</label>
+            </div>
+            <div>
+                <input type="date" class="tanggal" required="required">
+                <label for="tanggal">Tanggal Acara</label>
+            </div>
+            <div>
+                <input type="text" class="alamat" required="required">
+                <label for="alamat">Alamat</label>
+            </div>
+            <div>
+                <input type="text" class="keluarga" required="required">
+                <label for="keluarga">Keluarga</label>
+            </div>
+            <button class="btnSubmit">Tambah</button>
+        </div>
+    </section>
+    
+    <div class="acara-list">
+        <h2>Daftar Acara</h2>
+        <ul id="eventList"></ul>
+    </div>
+</body>
+</html>

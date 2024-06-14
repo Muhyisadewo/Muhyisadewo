@@ -1,0 +1,238 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #ffff;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  font-family: arial;
+}
+.navbar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.29);
+    background-color: #fff;
+    oferflow-x: auto;
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+}
+.nav-link {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden; 
+    white-space: nowrap;
+    font-family: sans-serif; 
+    font-size: 5px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+img {
+    width: 60%;
+    height: 68%;
+}
+.nav-link:hover{
+    color: #009578;
+}
+.link-active {
+    color: rgb(17 107 143);
+}
+.nav-text{
+    font-size: 14px;
+    margin-top: 1px;
+}
+.Judul {
+    font-size: 12px;
+    height: 99px;
+    padding-top: 5px;
+    font-family: sans-serif;
+    background-image: url(Bg.jpg);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 3px 4px #000;
+    color: white;
+    background-repeat: repeat-x;
+}
+h1{
+  padding-left: 15px;
+}
+.jdl{
+  height: 155px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 53px;
+  border: none;
+  border-radius: 21px;
+  font-size: 20px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.29);
+  background-color: white;
+  color: #fcfcfc;
+}
+.profil{
+  display: inline-block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-left: 6px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+.nama{
+  display: inline-block;
+  color: black;
+  margin-top: 19px;
+  margin-left: 25px;
+  padding-bottom: 50px;
+  font-wight: bolder;
+}
+.kolom1{
+  display: inline-grid;
+  border: 2px solid rgb(17 107 143);
+  border-righ: 6px;
+  padding: 9px;
+  border-radius: 20px;
+  margin-left: 40px;
+  text-decoration: none;
+}
+.P{
+  display: inline-grid;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  bottom: 50%;
+  margin-left: 9px;
+}
+.show1{
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 13px;
+}
+
+.kolom2{
+  display: inline-grid;
+  border: 2px solid rgb(17 107 143);
+  border-righ: 6px;
+  padding: 9px;
+  border-radius: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+.kolom1 a {
+  text-decoration: none;
+}
+.kolom2 a {
+  text-decoration: none;
+}
+.P{
+  display: inline-grid;
+  float: left;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  bottom: 50%;
+  margin-left: 9px;
+}
+.show2{
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 13px;
+}
+/* pengaturan */
+.sub-menu{
+  padding: 10px;
+  margin-top: 60%;
+}
+.user-info{
+  display: flex;
+  align-items: center;
+}
+.user-info h3{
+  font-weight: 500;
+}
+.user-info img{
+  width: 3px;
+  height: 3px;
+  margin-right: 15px;
+}
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+.sub-menu-link{
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 12px 0;
+  padding: 9px 0;
+}
+.sub-menu-link p{
+  width: 100%;
+  font-size: 19px;
+}
+.sub-menu-link img{
+  width: 40px;
+  height: 30px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 15px;
+}
+/*iki*/
+.logout-button hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+.logout-button{
+  display:flex;
+  align-items: center;
+  text-decoration: none;
+  color: red;
+  margin: 12px 0;
+  padding: 9px 0;
+}
+.logout-button p{
+  width: 100%;
+  font-size: 19px;
+}
+.logout-button img{
+  width: 38px;
+  height: 35px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 15px;
+}
+.logout-button span{
+ padding-right: 10px;
+ font-size: 22px;
+ transition: transform 0.5s; 
+}
+.sub-menu-link span{
+  padding-right: 10px;
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+  transform: translateX(5px);
+}
+.sub-menu-link:hover p{
+  font-weight: 600;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat</title>
+<style>
+    /* CSS untuk tampilan tombol dan input */
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .chat-input {
+        display: flex;
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+    .chat-input input {
+        flex: 1;
+        padding: 8px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .chat-input button {
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    .chat-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+    .chat-buttons button {
+        padding: 10px;
+        margin-right: 10px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+    <!-- Area Chat -->
+    <div class="chat-messages">
+        <!-- Tempat pesan-pesan ditampilkan -->
+    </div>
+    
+    <!-- Input Teks -->
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Ketik pesan...">
+        <button id="btnSend">Kirim</button>
+    </div>
+
+    <!-- Tombol-tombol -->
+    <div class="chat-buttons">
+        <button id="btnUpload">Upload File</button>
+        <button id="btnCamera">Kamera</button>
+        <button id="btnVoice">Voice</button>
+    </div>
+</div>
+
+<script>
+    // JavaScript untuk menangani aksi tombol
+
+    document.getElementById('btnUpload').addEventListener('click', function() {
+        // Panggil fungsi untuk upload file
+        uploadFile();
+    });
+
+    document.getElementById('btnCamera').addEventListener('click', function() {
+        // Logika untuk membuka kamera
+        alert('Tombol Kamera ditekan!');
+    });
+
+    document.getElementById('btnVoice').addEventListener('click', function() {
+        // Logika untuk voice chat
+        alert('Tombol Voice ditekan!');
+    });
+
+    document.getElementById('btnSend').addEventListener('click', function() {
+        // Panggil fungsi untuk mengirim pesan
+        sendMessage();
+    });
+
+    // Fungsi untuk upload file
+    function uploadFile() {
+        // Buat elemen input untuk upload file
+        var input = document.createElement('input');
+        input.type = 'file';
+        
+        // Ketika file dipilih
+        input.onchange = function(e) {
+            var file = e.target.files[0];
+            if (file) {
+                // Lakukan sesuatu dengan file yang diupload, misalnya kirim ke server
+                alert('File yang dipilih: ' + file.name);
+            }
+        };
+        
+        // Klik secara otomatis pada input file
+        input.click();
+    }
+
+    // Fungsi untuk mengirim pesan
+    function sendMessage() {
+        var messageInput = document.getElementById('chatInput');
+        var message = messageInput.value.trim();
+        
+        if (message !== '') {
+            // Tambahkan pesan ke area chat
+            var chatMessages = document.querySelector('.chat-messages');
+            var newMessage = document.createElement('div');
+            newMessage.textContent = message;
+            chatMessages.appendChild(newMessage);
+
+            // Kosongkan input setelah mengirim pesan
+            messageInput.value = '';
+        }
+    }
+</script>
+
+</body>
+</html>

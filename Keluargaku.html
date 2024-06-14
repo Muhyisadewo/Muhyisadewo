@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Keluargaku</title>
+  <script defer src="Keluargaku.js"></script>
+  <link rel="stylesheet" href="Keluargaku.css">
+</head>
+<body>
+  <div class="judul"><h1>KELUARGAKU</h1></div>
+  
+  <!-- Bagan Keluarga -->
+  <div class="tree">
+    <ul>
+      <li><a href="#"><img src="../angka/1.png" alt="foto bpk"><span>lukman hakim & imro'atul azizah</span></a>
+        <ul id="family-list">
+          <li><a href="#"><img src="../angka/2.png" alt=""><span>nia</span></a></li>
+          <li><a href="#"><img src="../angka/2.png" alt=""><span>zayyin</span></a></li>
+          <li><a href="#"><img src="../angka/2.png" alt=""><span>fabi</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Navigation -->
+  <!-- Input Form -->
+  <button class="btnOpen"><h1>+</h1></button>
+  <section class="box">
+    <div class="close">&times;</div>
+    <div class="circle">
+      <span class="register-head"></span>
+      <span class="register-body"></span>
+    </div>
+    <div class="registration-box">
+      <div>
+        <input type="text" class="nama" required="required">
+        <label for="nama">Nama</label>
+      </div>
+      <div>
+        <input type="text" class="alamat" required="required">
+        <label for="alamat">Alamat</label>
+      </div>
+      <div>
+        <input type="tel" class="first_name" required="required">
+        <label for="first_name">No Hp</label>
+      </div>
+      <div>
+        <input type="text" class="keluarga" required="required">
+        <label for="keluarga">Keluarga</label>
+      </div>
+      <button class="btnSubmit">Tambah</button>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const btnOpen = document.querySelector(".btnOpen");
+    const box = document.querySelector(".box");
+    const close = document.querySelector(".close");
+    const btnSubmit = document.querySelector(".btnSubmit");
+
+    btnOpen.addEventListener("click", () => {
+        box.style.display = "block";
+    });
+
+    close.addEventListener("click", () => {
+        box.style.display = "none";
+    });
+
+    btnSubmit.addEventListener("click", () => {
+        const nama = document.querySelector(".nama").value;
+        const alamat = document.querySelector(".alamat").value;
+        const noHp = document.querySelector(".first_name").value;
+        const keluarga = document.querySelector(".keluarga").value;
+
+        if (nama && alamat && noHp && keluarga) {
+            addMemberToFamilyTree(nama, alamat, noHp, keluarga);
+            box.style.display = "none";
+        } else {
+            alert("Please fill out all fields");
+        }
+    });
+
+    function addMemberToFamilyTree(nama, alamat, noHp, keluarga) {
+        const parent = document.querySelector(".tree ul > li > ul");
+        const newMember = document.createElement("li");
+        newMember.innerHTML = `<a href="#"><img src="../angka/2.png" alt=""><span>${nama}</span></a>`;
+        parent.appendChild(newMember);
+    }
+});
+
+  </script>
+</body>
+</html>
